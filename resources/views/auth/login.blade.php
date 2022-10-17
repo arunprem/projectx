@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Login | Upcube - Admin & Dashboard Template</title>
+    <title>Login | Project-x - Admin & Dashboard Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesdesign" name="author" />
@@ -48,20 +48,23 @@
 
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
-                                    <input id="username" name="username" class="form-control" type="text" required="" placeholder="Username">
+                                    <input id="username" name="username" class="form-control" type="text"
+                                        required="" placeholder="Username">
                                 </div>
                             </div>
 
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
-                                    <input id="password" name="password" class="form-control" type="password" required="" placeholder="Password">
+                                    <input id="password" name="password" class="form-control" type="password"
+                                        required="" placeholder="Password">
                                 </div>
                             </div>
 
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
                                     <div class="custom-control custom-checkbox">
-                                        <input id="remember_me" name="remember" type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <input id="remember_me" name="remember" type="checkbox"
+                                            class="custom-control-input" id="customCheck1">
                                         <label class="form-label ms-1" for="customCheck1">Remember me</label>
                                     </div>
                                 </div>
@@ -76,7 +79,8 @@
 
                             <div class="form-group mb-0 row mt-2">
                                 <div class="col-sm-7 mt-3">
-                                    <a href="{{ route('password.request') }}" class="text-muted"><i class="mdi mdi-lock"></i> Forgot
+                                    <a href="{{ route('password.request') }}" class="text-muted"><i
+                                            class="mdi mdi-lock"></i> Forgot
                                         your password?</a>
                                 </div>
                                 <div class="col-sm-5 mt-3">
