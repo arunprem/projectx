@@ -6,7 +6,7 @@
                 <div class="card">
                     <br>
                     <center>
-                        <img class="rounded-circle avatar-xl" src="{{ asset('backend/uploads/admin_images/'.$adminData->profile_image) }}"
+                        <img class="rounded-circle avatar-xl" src="{{!empty($adminData->profile_image)? url('backend/uploads/admin_images/'.$adminData->profile_image):url('images/no_image.jpg') }}"
                             alt="Card image cap">
                     </center>
                     <div class="card-body">

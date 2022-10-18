@@ -49,7 +49,7 @@
                                     <label for="profileImage-input" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">
                                         <img id="showImage" class="rounded avatar-lg"
-                                            src="{{ asset('backend/uploads/admin_images/'.$editProfileData->profile_image) }}" alt="Card image cap">
+                                            src="{{!empty($editProfileData->profile_image)? url('backend/uploads/admin_images/'.$editProfileData->profile_image):url('images/no_image.jpg') }}" alt="Card image cap">
                                     </div>
                                 </div>
                                 <input type="submit" value="Update Profile"
