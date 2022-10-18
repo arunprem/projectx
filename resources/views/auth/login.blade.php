@@ -40,6 +40,15 @@
                     </div>
 
                     <h4 class="text-muted text-center font-size-18"><b>Sign In</b></h4>
+                    @if (count($errors))
+                        @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="mdi mdi-block-helper me-2"></i>
+                            {{$error}}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endforeach
+                    @endif
 
                     <div class="p-3">
 
