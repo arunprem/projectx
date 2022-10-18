@@ -165,7 +165,7 @@
                         Profile</a>
                     <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> My
                         Wallet</a>
-                    <a class="dropdown-item d-block" href="#"><span
+                    <a class="dropdown-item d-block" href="{{route("change.password")}}"><span
                             class="badge bg-success float-end mt-1">11</span><i
                             class="ri-settings-2-line align-middle me-1"></i> Settings</a>
                     <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i>

@@ -32,6 +32,8 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
             Route::get('admin/profile', 'Profile')->name('admin.profile');
             Route::get('edit/profile', 'EditProfile')->name('edit.profile');
             Route::post('profile/save', 'saveProfile')->name('store.profile');
+            Route::get('admin/changepassword', 'changePassword')->name('change.password');
+            Route::post('changepassword/save','savePassword')->name('changepassword.save');
         });
     });
 });
