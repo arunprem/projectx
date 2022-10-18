@@ -24,9 +24,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::controller(AdminController::class)->group(function () {
-    Route::group(['middleware' => 'prevent-back-history'], function () {
-        Route::group(['middleware' => 'auth'], function () {
+
+Route::group(['middleware' => 'prevent-back-history'], function () {
+    Route::group(['middleware' => 'auth'], function () {
+        Route::controller(AdminController::class)->group(function () {
             Route::get('/admin/logout', 'destroy')->name('admin.logout');
             Route::get('admin/profile', 'Profile')->name('admin.profile');
             Route::get('edit/profile', 'EditProfile')->name('edit.profile');
