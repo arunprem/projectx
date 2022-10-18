@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
     //
+    
 
     public function destroy(Request $request)
     {
@@ -19,37 +20,38 @@ class AdminController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/login');
-    }// end method
+    } // end method
 
 
-    public function Profile(){
+    public function Profile()
+    {
         $id = Auth::user()->id;
         $adminData = User::find($id);
-        return view('admin.admin_profile_view',compact('adminData'));
+        return view('admin.admin_profile_view', compact('adminData'));
+    } //end method
 
 
-    }//end method
-
-
-    public function EditProfile(){
+    public function EditProfile()
+    {
         $id = Auth::user()->id;
         $editProfileData = User::find($id);
-        return view('admin.admin_profile_edit_view',compact('editProfileData'));
-    }//end method
+        return view('admin.admin_profile_edit_view', compact('editProfileData'));
+    } //end method
 
-    public function saveProfile(Request $request){
+    public function saveProfile(Request $request)
+    {
         $id = Auth::user()->id;
         $saveData = User::find($id);
         $saveData->name = $request->name;
         $saveData->email = $request->email;
-       if($request->file('profile_image')){
-        $file = $request->file('profile_image');
-        $filename = date('YmdHi').$file->getClientOriginalName();
-        $file->move(public_path('backend/uploads/admin_images'),$filename);
-        $saveData->profile_image = $filename;
-       }
-      
-       $saveData->save();
-    return redirect()->route('admin.profile');
+        if ($request->file('profile_image')) {
+            $file = $request->file('profile_image');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('backend/uploads/admin_images'), $filename);
+            $saveData->profile_image = $filename;
+        }
+
+        $saveData->save();
+        return redirect()->route('admin.profile');
     }
 }

@@ -47,34 +47,39 @@
                             @csrf
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
-                                    <input id="name" name="name" class="form-control" type="text" required="" placeholder="Name">
+                                    <input id="name" name="name" class="form-control" type="text"
+                                        required="" placeholder="Name">
                                 </div>
                             </div>
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
-                                    <input id="username" name="username" class="form-control" type="text" required="" placeholder="Username">
+                                    <input id="username" name="username" class="form-control" type="text"
+                                        required="" placeholder="Username">
                                 </div>
                             </div>
 
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
-                                    <input id="email" name="email" class="form-control" type="email" required="" placeholder="Email">
+                                    <input id="email" name="email" class="form-control" type="email"
+                                        required="" placeholder="Email">
                                 </div>
                             </div>
 
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
-                                    <input id="password" name="password" class="form-control" type="password" required="" placeholder="Password">
+                                    <input id="password" name="password" class="form-control" type="password"
+                                        required="" placeholder="Password">
                                 </div>
                             </div>
 
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
-                                    <input id="password_confirmation" name="password_confirmation" class="form-control" type="password" required="" placeholder="Password Confirmation">
+                                    <input id="password_confirmation" name="password_confirmation" class="form-control"
+                                        type="password" required="" placeholder="Password Confirmation">
                                 </div>
                             </div>
 
-                  
+
 
                             <div class="form-group text-center row mt-3 pt-1">
                                 <div class="col-12">
@@ -85,7 +90,7 @@
 
                             <div class="form-group mt-2 mb-0 row">
                                 <div class="col-12 mt-3 text-center">
-                                    <a href="{{route('login')}}" class="text-muted">Already have account?</a>
+                                    <a href="{{ route('login') }}" class="text-muted">Already have account?</a>
                                 </div>
                             </div>
                         </form>
