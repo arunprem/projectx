@@ -4,23 +4,7 @@
             <!-- LOGO -->
             <div class="navbar-brand-box">
                 
-                {{-- <a href="index.html" class="logo logo-dark">
-                    <span class="logo-sm">
-                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="{{ asset('backend/assets/images/logo-dark.png') }}" alt="logo-dark" height="20">
-                    </span>
-                </a>
-
-                <a href="index.html" class="logo logo-light">
-                    <span class="logo-sm">
-                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm-light" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="{{ asset('backend/assets/images/logo-light.png') }}" alt="logo-light" height="20">
-                    </span>
-                </a> --}}
+            
             </div>
 
             <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
@@ -171,7 +155,7 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i>
+                    <a class="dropdown-item" href="{{route('admin.profile')}}"><i class="ri-user-line align-middle me-1"></i>
                         Profile</a>
                     <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> My
                         Wallet</a>
