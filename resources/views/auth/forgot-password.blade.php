@@ -47,14 +47,16 @@
                             @csrf
 
                             <div class="alert alert-info alert-dismissible fade show" role="alert">
-                                Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
+                                Forgot your password? No problem. Just let us know your email address and we will email
+                                you a password reset link that will allow you to choose a new one.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"
                                     aria-label="Close"></button>
                             </div>
 
                             <div class="form-group mb-3">
                                 <div class="col-xs-12">
-                                    <input id="email" name="email" class="form-control" type="email" required="" placeholder="Email">
+                                    <input id="email" name="email" class="form-control" type="email"
+                                        required="" placeholder="Email">
                                 </div>
                             </div>
 
