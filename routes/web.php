@@ -16,16 +16,15 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.frontend_master');
 });
-
-Route::get('/dashboard', function () {
-    return view('admin.index');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 
 
 Route::group(['middleware' => 'prevent-back-history'], function () {
+    Route::get('/dashboard', function () {
+        return view('admin.index');
+    })->middleware(['auth', 'verified'])->name('dashboard');
+
     Route::group(['middleware' => 'auth'], function () {
         Route::controller(AdminController::class)->group(function () {
             Route::get('/admin/logout', 'destroy')->name('admin.logout');
@@ -33,7 +32,7 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
             Route::get('edit/profile', 'EditProfile')->name('edit.profile');
             Route::post('profile/save', 'saveProfile')->name('store.profile');
             Route::get('admin/changepassword', 'changePassword')->name('change.password');
-            Route::post('changepassword/save','savePassword')->name('changepassword.save');
+            Route::post('changepassword/save', 'savePassword')->name('changepassword.save');
         });
     });
 });

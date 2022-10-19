@@ -26,14 +26,14 @@
                                     <label for="old-password-input" class="col-sm-2 col-form-label">Old Password</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="oldPassword" type="password" value=""
-                                            id="old-password-input">
+                                            id="old-password-input" placeholder="old password">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="new-password-input" class="col-sm-2 col-form-label">New Password</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="newPassword" type="password" value=""
-                                            id="new-password-input">
+                                            id="new-password-input" placeholder="new password">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -41,7 +41,7 @@
                                         Password</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="password" name="confirmPassword" value=""
-                                            id="confirm-password-input">
+                                            id="confirm-password-input" placeholder="confirm password">
                                     </div>
                                 </div>
                                 <input type="submit" value="Change Password"
