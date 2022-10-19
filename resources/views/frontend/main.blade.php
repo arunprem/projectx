@@ -14,11 +14,13 @@
                     </div>
                     <div class="col-xl-5 col-lg-6">
                         <div class="banner__content">
-                            <h2 class="title wow fadeInUp" data-wow-delay=".2s"><span>I will give you Best</span> <br>
-                                Product in the shortest time.</h2>
-                            <p class="wow fadeInUp" data-wow-delay=".4s">I'm a Rasalina based product design & visual
-                                designer focused on crafting clean & user‑friendly experiences</p>
+                         
+                            <h2 class="title wow fadeInUp" data-wow-delay=".2s"><span>{{$homeData['heading']}}</span> <br>
+                                </h2>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">{{$homeData['details']}}</p>
                             <a href="about.html" class="btn banner__btn wow fadeInUp" data-wow-delay=".6s">more about me</a>
+
+
                         </div>
                     </div>
                 </div>
@@ -85,20 +87,17 @@
                         <div class="about__content">
                             <div class="section__title">
                                 <span class="sub-title">01 - About me</span>
-                                <h2 class="title">I have transform your ideas into remarkable digital products</h2>
+                                <h2 class="title">{{$aboutData['heading']}}</h2>
                             </div>
                             <div class="about__exp">
                                 <div class="about__exp__icon">
                                     <img src="{{ asset('frontend/assets/img/icons/about_icon.png') }}" alt="">
                                 </div>
                                 <div class="about__exp__content">
-                                    <p>20+ Years Experience In this game, Means <br> Product Designing</p>
+                                    <p>{{$aboutData['subHeading']}}</p>
                                 </div>
                             </div>
-                            <p class="desc">I love to work in User Experience & User Interface designing. Because I love
-                                to solve the design problem and find easy and better solutions to solve it. I always try my
-                                best to make good user interface with the best user experience. I have been working as a UX
-                                Designer</p>
+                            <p class="desc">{{$aboutData['details']}}</p>
                             <a href="about.html" class="btn">Download my resume</a>
                         </div>
                     </div>
@@ -1133,7 +1132,8 @@
                     <div class="col-lg-6 order-0 order-lg-2">
                         <ul class="testimonial__avatar__img">
                             <li><img src="{{ asset('frontend/assets/img/images/testi_img01.png') }}" alt=""></li>
-                            <li><img src="{{ asset('frontend/assets/img/images/testi_img02.png') }}" alt=""></li>
+                            <li><img src="{{ asset('frontend/assets/img/images/testi_img02.png') }}" alt="">
+                            </li>
                             <li><img src="{{ asset('frontend/assets/img/images/testi_img03.png') }}" alt="">
                             </li>
                             <li><img src="{{ asset('frontend/assets/img/images/testi_img04.png') }}" alt="">
