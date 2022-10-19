@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\frontend\Homecontroller;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -15,8 +16,13 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.frontend_master');
+// Route::get('/', function () {
+//     return view('frontend.frontend_master');
+// });
+
+
+Route::controller(Homecontroller::class)->group(function () {
+    Route::get('/', 'home')->name('home');
 });
 
 
