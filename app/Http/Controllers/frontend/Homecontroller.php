@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class Homecontroller extends Controller
 {
     public function home(){
-        return view('frontend.frontend_master');
+        return view('frontend.main');
     }
 }
