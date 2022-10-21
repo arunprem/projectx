@@ -11,7 +11,7 @@
                     <li class="menu-title">Menu</li>
 
                     <li>
-                        <a href="{{route('dashboard')}}" class="waves-effect">
+                        <a href="{{ route('dashboard') }}" class="waves-effect">
                             <i class="ri-dashboard-line"></i><span
                                 class="badge rounded-pill bg-success float-end">3</span>
                             <span>Dashboard</span>
@@ -19,12 +19,13 @@
                     </li>
                     <li>
                         <a href="javascript: void(0);" class="has-arrow waves-effect">
-                            <i class="fa fa-home""></i>
+                            <i class="fa fa-home"></i>
                             <span>Home Page</span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
-                            <li><a href="{{route('home.section')}}">Home</a></li>
-                            <li><a href="{{route('about.section')}}">About  </a></li>
+                            <li><a href="{{ route('home.section') }}"> <i class="fa fa-bars"></i> Home</a></li>
+                            <li><a href="{{ route('about.section') }}"> <i class="fa fa-bars"></i> About </a>
+                            </li>
                         </ul>
                     </li>
 
@@ -35,7 +36,7 @@
                         </a>
                     </li>
 
-                
+
 
                     <li>
                         <a href="javascript: void(0);" class="has-arrow waves-effect">

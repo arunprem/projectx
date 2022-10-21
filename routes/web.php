@@ -42,8 +42,9 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
             Route::post('changepassword/save', 'savePassword')->name('changepassword.save');
         });
         Route::controller(Homemanager::class)->group(function () {
-            Route::get('section/home', 'viewHomeSection')->name('home.section');
-            Route::get('section/aboute', 'viewAboutSection')->name('about.section');
+            Route::get('homeslider/edit', 'viewHomeSection')->name('home.section');
+            Route::get('about/edit', 'viewAboutSection')->name('about.section');
+            Route::post('homeslider/save', 'saveHomeSlider')->name('homeslider.save');//homeslider.save
         });
     });
 });

@@ -3,17 +3,14 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\HomeSlide;
 use Illuminate\Http\Request;
 
 class Homecontroller extends Controller
 {
     public function home()
     {
-        $homeData = array(
-            "heading" => "I will give you Best
-            Product in the shortest time.",
-            "details" => "I'm a Rasalina based product design & visual designer focused on crafting clean & user‑friendly experiences"
-        );
+        $homeData = HomeSlide::find(1);
 
         $aboutData = array(
             "heading" => "I have transform your ideas into remarkable digital products",
