@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\frontend\Homecontroller;
+use App\Http\Controllers\admin\Homemanager;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -39,6 +40,10 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
             Route::post('profile/save', 'saveProfile')->name('store.profile');
             Route::get('admin/changepassword', 'changePassword')->name('change.password');
             Route::post('changepassword/save', 'savePassword')->name('changepassword.save');
+        });
+        Route::controller(Homemanager::class)->group(function () {
+            Route::get('section/home', 'viewHomeSection')->name('home.section');
+            Route::get('section/aboute', 'viewAboutSection')->name('about.section');
         });
     });
 });
