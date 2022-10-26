@@ -25,7 +25,6 @@ class Homemanager extends Controller
         if ($request->file('slider_image')) {
             $image = $request->file('slider_image');
             $fileName = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
-
             Image::make($image)->resize(636, 852);
         }
     }
