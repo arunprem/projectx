@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\Aboutmanager;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\frontend\Homecontroller;
@@ -43,8 +44,13 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
         });
         Route::controller(Homemanager::class)->group(function () {
             Route::get('homeslider/edit', 'viewHomeSection')->name('home.section');
-            Route::get('about/edit', 'viewAboutSection')->name('about.section');
-            Route::post('homeslider/save', 'saveHomeSlider')->name('homeslider.save');//homeslider.save
+
+            Route::post('homeslider/save', 'saveHomeSlider')->name('homeslider.save'); //homeslider.save
+        });
+
+        Route::controller(Aboutmanager::class)->group(function(){
+            Route::get('aboutus/view', 'aboutUsHome')->name('about.section'); 
+            Route::post('aboutus/edit','saveAboutUs')->name('about.save');
         });
     });
 });
