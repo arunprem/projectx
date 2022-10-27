@@ -23,8 +23,9 @@
                             <span>Home Page</span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
-                            <li><a href="{{ route('home.section') }}"> <i class="fa fa-bars"></i> Home</a></li>
-                            <li><a href="{{ route('about.section') }}"> <i class="fa fa-bars"></i> About </a>
+                            <li><a href="{{ route('home.section') }}"> <i class="fa fa-file"></i> Home</a>
+                            </li>
+                            <li><a href="{{ route('about.section') }}"> <i class="fa fa-file"></i> About </a>
                             </li>
                         </ul>
                     </li>
