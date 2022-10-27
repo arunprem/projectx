@@ -87,17 +87,17 @@
                         <div class="about__content">
                             <div class="section__title">
                                 <span class="sub-title">01 - About me</span>
-                                <h2 class="title">{{ $aboutData['heading'] }}</h2>
+                                <h2 class="title">{{ $aboutData->title_about }}</h2>
                             </div>
                             <div class="about__exp">
                                 <div class="about__exp__icon">
                                     <img src="{{ asset('frontend/assets/img/icons/about_icon.png') }}" alt="">
                                 </div>
                                 <div class="about__exp__content">
-                                    <p>{{ $aboutData['subHeading'] }}</p>
+                                    <p>{{ $aboutData->short_description }}</p>
                                 </div>
                             </div>
-                            <p class="desc">{{ $aboutData['details'] }}</p>
+                            <p class="desc">{{ $aboutData->long_description }}</p>
                             <a href="about.html" class="btn">Download my resume</a>
                         </div>
                     </div>
