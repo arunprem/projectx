@@ -65,7 +65,7 @@
                                     <label for="sliderImage-input" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">
                                         <img id="showImage" class="rounded avatar-lg"
-                                            src="{{ !empty($homeSection->home_slide) ? url('backend/uploads/admin_images/' . $homeSection->home_slide) : url('images/no_image.jpg') }}"
+                                            src="{{ !empty($homeSection->home_slide) ? url($homeSection->home_slide) : url('images/no_image.jpg') }}"
                                             alt="Card image cap">
                                     </div>
                                 </div>
