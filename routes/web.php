@@ -48,9 +48,9 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
             Route::post('homeslider/save', 'saveHomeSlider')->name('homeslider.save'); //homeslider.save
         });
 
-        Route::controller(Aboutmanager::class)->group(function(){
-            Route::get('aboutus/view', 'aboutUsHome')->name('about.section'); 
-            Route::post('aboutus/edit','saveAboutUs')->name('about.save');
+        Route::controller(Aboutmanager::class)->group(function () {
+            Route::get('aboutus/view', 'aboutUsHome')->name('about.section');
+            Route::post('aboutus/edit', 'saveAboutUs')->name('about.save');
         });
     });
 });

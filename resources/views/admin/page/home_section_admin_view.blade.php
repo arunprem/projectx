@@ -1,7 +1,5 @@
 @extends('admin.admin_master')
 @section('admin')
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
     <div class="page-content">
         <div class="container-fluid">
             <div class="row">
@@ -28,7 +26,7 @@
                                     updated</code>
                             <form method="post" action="{{ route('homeslider.save') }}" enctype="multipart/form-data">
                                 @csrf
-                                <input name="id" type="hidden" value="{{$homeSection->id}}"/>
+                                <input name="id" type="hidden" value="{{ $homeSection->id }}" />
                                 <div class="row mb-3">
                                     <label for="title-input" class="col-sm-2 col-form-label">Title</label>
                                     <div class="col-sm-10">
@@ -57,7 +55,7 @@
                                     <label for="sliderImage-input" class="col-sm-2 col-form-label">Home Slider
                                         Image</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="slider_image" type="file" value=""
+                                        <input class="form-control" multiple="multiple" name="slider_image" type="file" value=""
                                             id="sliderImage-input">
                                     </div>
                                 </div>

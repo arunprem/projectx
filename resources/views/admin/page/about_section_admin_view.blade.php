@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 @section('admin')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
     <div class="page-content">
         <div class="container-fluid">
             <div class="row">
@@ -57,14 +57,16 @@
                                     <label for="aboutImage-input" class="col-sm-2 col-form-label">About us
                                         Images</label>
                                     <div class="col-sm-4">
-                                        <input class="form-control" name="about_image" type="file" value=""
+                                        <input class="form-control" multiple="multiple" name="about_images[]" type="file" value=""
                                             id="aboutImage-input">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <label for="about-input" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">
-                                        <img id="showImage" class="rounded avatar-lg" src="{{ !empty($aboutSection->about_iamge) ? url($aboutSection->about_image) : url('images/no_image.jpg') }}" alt="Card image cap">
+                                        <img id="showImage" class="rounded avatar-lg"
+                                            src="{{ !empty($aboutSection->about_iamge) ? url($aboutSection->about_image) : url('images/no_image.jpg') }}"
+                                            alt="Card image cap">
                                     </div>
                                 </div>
                                 <input type="submit" value="Update About us"
@@ -90,5 +92,5 @@
                 imageReader.readAsDataURL(e.target.files['0']);
             })
         });
-    </script> 
+    </script>
 @endsection
