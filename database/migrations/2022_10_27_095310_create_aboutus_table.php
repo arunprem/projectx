@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('title_about')->nullable();
             $table->string('short_description')->nullable();
             $table->string('long_description')->nullable();
-            $table->string('about_image')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aboutuses');
+        Schema::dropIfExists('aboutus');
     }
 };

@@ -15,7 +15,7 @@ class Homecontroller extends Controller
         $homeData = HomeSlide::find(1);
 
         $aboutData = Aboutus::find(1);
-        $aboutUsImage = Aboutmultipleimage::where('aboutus_id', '=', $aboutData->id)->get();
+        $aboutUsImage = Aboutmultipleimage::where('aboutus_id', '=', $aboutData->id)->orderByRaw("RAND()")->get();
 
         return view('frontend.main', compact('homeData', 'aboutData', 'aboutUsImage'));
     }
