@@ -47,7 +47,7 @@
                                 <div class="row mb-3">
                                     <label for="title-input" class="col-sm-2 col-form-label">Description</label>
                                     <div class="col-sm-8">
-                                        <textarea class="form-control" id="description" name="long_description" rows="3" cols="25"> {{ $aboutSection->long_description }}
+                                        <textarea class="form-control" id="elm1" name="long_description" rows="3" cols="25"> {{ $aboutSection->long_description }}
                                             </textarea>
                                     </div>
                                 </div>
