@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\frontend\Homecontroller;
 use App\Http\Controllers\admin\Homemanager;
+use App\Http\Controllers\admin\PortfolioManagementController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -51,6 +52,10 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
         Route::controller(Aboutmanager::class)->group(function () {
             Route::get('aboutus/view', 'aboutUsHome')->name('about.section');
             Route::post('aboutus/edit', 'saveAboutUs')->name('about.save');
+        });
+
+        Route::controller(PortfolioManagementController::class)->group(function () {
+            Route::get('portfolio/view','portfolioHome')->name('portfolio.section');
         });
     });
 });

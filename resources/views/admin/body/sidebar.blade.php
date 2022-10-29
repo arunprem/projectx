@@ -27,6 +27,8 @@
                             </li>
                             <li><a href="{{ route('about.section') }}"> <i class="fa fa-file"></i> About </a>
                             </li>
+                            <li><a href="{{ route('portfolio.section') }}"> <i class="fa fa-file"></i> portfolios </a>
+                            </li>
                         </ul>
                     </li>
 
