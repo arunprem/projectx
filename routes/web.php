@@ -58,6 +58,7 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
             Route::get('portfolio/view','portfolioHome')->name('portfolio.section');
             Route::get('portfolio/edit','portfolioEdit')->name('portfolio.edit');
             Route::get('portfolio/remove','portfolioRemvoe')->name('portfolio.remove');
+            Route::get('portfolio/add','portfolioAdd')->name('portfolio.save');
         });
     });
 });

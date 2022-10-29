@@ -17,13 +17,17 @@ class PortfolioManagementController extends Controller
         return view('admin.page.portfoli_section_admin_view',compact('portfolio'));
     }
 
+    public function portfolioAdd(){
+        return view('admin.page.portfolio_add');
+    }
+
 
     public function portfolioEdit(){
-        return "asdf";
+        return view('admin.page.portfolio_edit');
     }
 
     public function portfolioRemvoe(){
-        return "asdf";
+        return "deleted";
     }
 
 }

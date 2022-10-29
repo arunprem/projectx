@@ -24,9 +24,9 @@
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title d-flex justify-content-between align-items-center">Portfolio Management
-                                <button type="button" class="btn btn-success waves-effect waves-light">
+                                <a type="button" class="btn btn-success waves-effect waves-light" href="{{route('portfolio.save')}}">
                                     <i class="fa fa-plus"></i> New Portfolio
-                                </button>
+                                </a>
                             </h4>
 
 
