@@ -55,7 +55,7 @@
                                     <label for="sliderImage-input" class="col-sm-2 col-form-label">Home Slider
                                         Image</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" multiple="multiple" name="slider_image" type="file" value=""
+                                        <input class="form-control"  name="slider_image" type="file" value=""
                                             id="sliderImage-input">
                                     </div>
                                 </div>

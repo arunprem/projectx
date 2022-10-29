@@ -24,7 +24,8 @@
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title d-flex justify-content-between align-items-center">Portfolio Management
-                                <a type="button" class="btn btn-success waves-effect waves-light" href="{{route('portfolio.save')}}">
+                                <a type="button" class="btn btn-success waves-effect waves-light"
+                                    href="{{ route('portfolio.save') }}">
                                     <i class="fa fa-plus"></i> New Portfolio
                                 </a>
                             </h4>
@@ -53,9 +54,9 @@
                                             <tbody>
                                                 @foreach ($portfolio as $item)
                                                     <tr>
-                                                        <td style="width:100px">{{ $item->portfolio_name }}</td>
-                                                        <td style="width:100px">{{ $item->portfoli_title }}</td>
-                                                        <td style="width:600px">{{ $item->portfoli_description }}</td>
+                                                        <td>{{ $item->portfolio_name }}</td>
+                                                        <td>{{ $item->portfoli_title }}</td>
+                                                        <td>{{ $item->portfoli_description }}</td>
                                                         <td>{{ $item->portfoli_image }}</td>
                                                         <td><a type="button"
                                                                 class="btn btn-success waves-effect waves-light"
@@ -90,10 +91,5 @@
         });
     </script>
 
-    <style>
-        .wrap {
-            word-wrap: break-word;
-            width: 150px;
-        }
-    </style>
+ 
 @endsection
