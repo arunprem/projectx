@@ -1,6 +1,5 @@
 @extends('admin.admin_master')
 @section('admin')
-
     <div class="page-content">
         <div class="container-fluid">
             <div class="row">
@@ -57,11 +56,11 @@
                                                     <tr>
                                                         <td>{{ $item->portfolio_name }}</td>
                                                         <td>{{ $item->portfoli_title }}</td>
-                                                        <td>{{ $item->portfoli_description }}</td>
+                                                        <td>{!! $item->portfoli_description !!}</td>
                                                         <td>{{ $item->portfoli_image }}</td>
                                                         <td><a type="button"
                                                                 class="btn btn-success waves-effect waves-light"
-                                                                href="{{ route('portfolio.edit') }}">
+                                                                href="{{ route('portfolio.edit', ['id' => $item->id]) }}">
                                                                 <i class="fa fa-edit"></i>
                                                             </a>
                                                             <a type="button"
@@ -87,10 +86,8 @@
         </div>
     </div>
     <script>
-     
-            $('#datatable').DataTable({
+        $('#datatable').DataTable({
 
-            });
-       
+        });
     </script>
 @endsection
