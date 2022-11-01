@@ -44,11 +44,11 @@
                                             role="grid" aria-describedby="datatable_info">
                                             <thead>
                                                 <tr role="row">
-                                                    <th> Name </th>
-                                                    <th> Title</th>
-                                                    <th style="width: 350px">Description</th>
-                                                    <th>Image</th>
-                                                    <th>Action</th>
+                                                    <th style="width: 100px"> Name </th>
+                                                    <th style="width: 250px"> Title</th>
+                                                    <th style="width: 400px">Description</th>
+                                                    <th style="width: 300px">Image</th>
+                                                    <th style="width: 100px">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -86,8 +86,10 @@
         </div>
     </div>
     <script>
-        $('#datatable').DataTable({
+        $(document).ready(function() {
+            $('#datatable').DataTable({
 
+            });
         });
     </script>
 @endsection

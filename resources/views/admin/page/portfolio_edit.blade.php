@@ -75,4 +75,15 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('#portFolioImage-input').change(function(e) {
+                var imageReader = new FileReader();
+                imageReader.onload = function(e) {
+                    $('#showImage').attr('src', e.target.result);
+                }
+                imageReader.readAsDataURL(e.target.files['0']);
+            })
+        });
+    </script>
 @endsection
