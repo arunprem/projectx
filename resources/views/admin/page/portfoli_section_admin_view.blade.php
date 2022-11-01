@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('admin')
+
     <div class="page-content">
         <div class="container-fluid">
             <div class="row">
@@ -25,7 +26,7 @@
                         <div class="card-header">
                             <h4 class="card-title d-flex justify-content-between align-items-center">Portfolio Management
                                 <a type="button" class="btn btn-success waves-effect waves-light"
-                                    href="{{ route('portfolio.save') }}">
+                                    href="{{ route('portfolio.add') }}">
                                     <i class="fa fa-plus"></i> New Portfolio
                                 </a>
                             </h4>
@@ -46,7 +47,7 @@
                                                 <tr role="row">
                                                     <th> Name </th>
                                                     <th> Title</th>
-                                                    <th>Description</th>
+                                                    <th style="width: 350px">Description</th>
                                                     <th>Image</th>
                                                     <th>Action</th>
                                                 </tr>
@@ -86,10 +87,10 @@
         </div>
     </div>
     <script>
-        var table = $('#datatable').DataTable({
+     
+            $('#datatable').DataTable({
 
-        });
+            });
+       
     </script>
-
- 
 @endsection

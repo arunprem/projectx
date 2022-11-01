@@ -56,9 +56,10 @@ Route::group(['middleware' => 'prevent-back-history'], function () {
 
         Route::controller(PortfolioManagementController::class)->group(function () {
             Route::get('portfolio/view','portfolioHome')->name('portfolio.section');
-            Route::get('portfolio/edit','portfolioEdit')->name('portfolio.edit');
+            Route::get('portfolio/edit','portfolioEditView')->name('portfolio.edit');
             Route::get('portfolio/remove','portfolioRemvoe')->name('portfolio.remove');
-            Route::get('portfolio/add','portfolioAdd')->name('portfolio.save');
+            Route::get('portfolio/add','portfolioAddView')->name('portfolio.add');
+            Route::post('portfolio/save','portfolioSave')->name('portfolio.save');
         });
     });
 });
