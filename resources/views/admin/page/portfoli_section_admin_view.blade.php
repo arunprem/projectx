@@ -65,7 +65,7 @@
                                                             </a>
                                                             <a type="button"
                                                                 class="btn btn-danger waves-effect waves-light"
-                                                                href="{{ route('portfolio.remove') }}">
+                                                                href="{{ route('portfolio.remove', ['id' => $item->id]) }}">
                                                                 <i class="fa fa-trash"></i>
                                                             </a>
                                                         </td>

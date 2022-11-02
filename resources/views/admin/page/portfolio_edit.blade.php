@@ -19,6 +19,16 @@
             </div>
             <div class="row">
                 <div class="col-12">
+                    @if (count($errors))
+                        @foreach ($errors->all() as $error)
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <i class="mdi mdi-block-helper me-2"></i>
+                                {{ $error }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        @endforeach
+                    @endif
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Edit Portfolio</h4>
